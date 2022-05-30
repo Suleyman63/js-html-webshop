@@ -1,0 +1,132 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.career-img {
+  height: 300px;
+  width: 100%;
+}
+
+.career-header {
+  padding: 30px;
+  background-color: red;
+  height: 80px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.accordion {
+  position: relative;
+  margin: 30px auto;
+  width: 80%;
+}
+
+[id*="open-accordion"],
+[id*="close-accordion"] {
+  background: rgb(11, 102, 155);
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after,
+[id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #fff;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+.button-container {
+  margin: 30px 690px 30px;
+  text-align: center;
+  height: 40px;
+  weight: 60px;
+}
+.button {
+  cursor: pointer;
+  width: 200px;
+  border: none;
+  background-color: #286783;
+  color: #fff;
+  padding: 12px 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.button:hover {
+  text-decoration: none;
+  background-color: #ffc116;
+  color: #fff;
+}
